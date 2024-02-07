@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# The pkill -f command searches for processes whose command line matches the provided pattern and terminates them. In this case, it will search for processes with the command line containing "7-highlander" and stop them
+# If the command is successful, the processes will be terminated. If there are no matching processes, the pkill command will have no effect.
+# pkill -f 7-highlander or pkill -f "7-highlander" works
+
+pkill -f "7-highlander"

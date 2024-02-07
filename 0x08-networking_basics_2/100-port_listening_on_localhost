@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Bash script listens on port 98 on localhost.
+# nc - netcat utility,versatile networking tool used for reading from and writing to network connections
+# -l: instructs netcat to listen for incoming connections
+# localhost: Refers to the loopback address, which represents the local machine itself.
+# 98: Specifies the port number on which the server will listen for incoming connections.
+
+nc -l localhost 98

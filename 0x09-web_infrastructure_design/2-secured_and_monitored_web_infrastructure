@@ -1,0 +1,20 @@
+https://imgur.com/bX0imcb
+
+Specifics about this infrastructure:
+
+Firewalls: Firewalls are added to control network access and protect the infrastructure from unauthorized access and potential security threats.
+
+HTTPS: Traffic is served over HTTPS to encrypt the communication between the user and the infrastructure, ensuring data confidentiality and integrity.
+
+Monitoring: Monitoring is used to track the performance, availability, and security of the infrastructure, enabling proactive issue detection and resolution.
+
+Monitoring Data Collection: The monitoring tool collects data from the monitoring clients installed on the servers, gathering metrics, logs, and other relevant information for analysis and visualization.
+
+
+Issues with this infrastructure:
+
+Terminating SSL at the load balancer level: While terminating SSL at the load balancer provides scalability benefits, it can be an issue if end-to-end encryption is required. In this setup, the traffic between the load balancer and the servers is unencrypted, which may expose sensitive data if compromised.
+
+Single MySQL server capable of accepting writes: Having only one MySQL server capable of accepting writes introduces a single point of failure. If the server fails, write operations will be impacted, potentially leading to data inconsistency or service disruption.
+
+Servers with the same components: Having servers with the same components (database, web server, and application server) might be problematic in terms of scalability and fault tolerance. For optimal performance and redundancy, it is generally recommended to distribute different components across multiple servers

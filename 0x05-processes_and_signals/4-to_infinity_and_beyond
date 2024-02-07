@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# it will print "To infinity and beyond" to the console every 2 seconds indefinitely
+#+ until you manually interrupt or terminate the script execution
+# while true: This creates an infinite loop. The condition true is always true, so the loop will continue indefinitely unless interrupted or terminated.
+# do: Marks the beginning of the loop block.
+# echo "To infinity and beyond": This line prints the text "To infinity and beyond" to the console.
+# sleep 2: This command pauses the script execution for 2 seconds before continuing to the next iteration of the loop.
+# done: Marks the end of the loop block.
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done

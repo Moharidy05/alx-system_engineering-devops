@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# The script is a basic process management script that starts, stops, or restarts the manage_my_process process based on the command-line argument provided.
+# In the script:
+
+# If the script is called with the argument "start", it executes ./manage_my_process in the background, creates a PID file (/var/run/my_process.pid), writes the PID of the process to the PID file, and displays a message indicating that the process has started.
+# If the script is called with the argument "stop", it displays a message indicating that the process has stopped, kills the process by reading its PID from the PID file, and removes the PID file.
+# If the script is called with the argument "restart", it performs the same steps as the "stop" operation, followed by the "start" operation.
+# If the script is called without any arguments or with an unrecognized argument, it displays a usage message.
+
+if [ "${1}" == "start" ]
+then
+    ./manage_my_process &
+    touch /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
+    echo "manage_my_process started"
+elif [ "${1}" == "stop" ]
+then
+    echo "manage_my_process stopped"
+    kill "$(cat /var/run/my_process.pid)"
+    rm /var/run/my_process.pid
+elif [ "${1}" == "restart" ]
+then
+    kill "$(cat /var/run/my_process.pid)"
+    rm /var/run/my_process.pid
+    ./manage_my_process &
+    touch /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
+    echo "manage_my_process restarted"
+else
+    echo "Usage: manage_my_process {start|stop|restart}"
+fi

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays the PID along with the process name, of 
+#+ processes whose name contains the word "bash".
+# command is used to list the running processes that match the pattern "bash" and display their process IDs along with the corresponding command names.
+# pgrep bash: Searches for processes whose command name matches the pattern "bash" and retrieves their process IDs.
+# -l: Displays the process IDs along with the corresponding command names.
+
+pgrep bash -l

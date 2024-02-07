@@ -1,0 +1,32 @@
+https://imgur.com/T49taZZ
+
+Specifics about the Infrastructure:
+Server: The physical or virtual machine that hosts the web infrastructure, responsible for processing requests and generating responses.
+
+Domain Name: A human-readable address that maps to the server's IP address. It enables users to access the website using www.foobar.com.
+
+www Record: The www record in www.foobar.com is a CNAME (Canonical Name) DNS record that points to the server's IP address (8.8.8.8). It specifies that www.foobar.com is an alias for the domain's root domain (foobar.com).
+
+Web Server: Nginx handles incoming HTTP requests, serving static content, and forwarding dynamic requests to the application server for processing.
+
+Application Server: This server runs the application code, processes dynamic requests, communicates with the database, and generates dynamic content for the website.
+
+Database: MySQL is used to store and manage data for the website, providing a structured and efficient way to organize and retrieve information.
+
+
+Communication with User's Computer:
+When the user accesses www.foobar.com, their computer sends an HTTP request to the server's IP address (8.8.8.8).
+The request is received by the web server, which processes static content or forwards dynamic requests to the application server.
+The application server interacts with the MySQL database if necessary and generates an HTTP response.
+The response is sent back to the user's computer, which renders the website in the user's web browser.
+
+Issues with this Infrastructure:
+
+1. Single Point of Failure (SPOF):
+Since there's only one server, if it fails, the entire website will be inaccessible.
+
+2. Downtime during Maintenance:
+When performing maintenance tasks such as deploying new code, the web server needs to be restarted, causing downtime during the restart process.
+
+3. Scalability Issues:
+The infrastructure cannot easily handle a large influx of incoming traffic. If the website experiences a sudden increase in visitors, it might become slow or unresponsive.

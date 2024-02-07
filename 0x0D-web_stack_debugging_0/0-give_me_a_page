@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# START AN APACHE SERVER IN A CONTAINER IN DOCKER
+
+service apache2 start

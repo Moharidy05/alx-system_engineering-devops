@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# When you run kill "$(pgrep -f 4-to_infinity_and_beyond)", it will terminate all running processes that match the pattern "4-to_infinity_and_beyond".
+# pgrep -f 4-to_infinity_and_beyond: Searches for processes whose command line matches the pattern "4-to_infinity_and_beyond" and retrieves their process IDs.
+# $(...): The command substitution syntax $(...) is used to capture the output of the pgrep command and use it as an argument for the kill command.
+# kill: Sends a termination signal to the specified process IDs.
+# Kills the 4-to_infinity_and_beyond process
+
+kill "$(pgrep -f "4-to_infinity_and_beyond")"

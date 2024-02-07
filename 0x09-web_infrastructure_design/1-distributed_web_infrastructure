@@ -1,0 +1,45 @@
+https://imgur.com/cJSJlPt
+
+specifics about this infrastructure:
+
+Server 1:
+Web Server (Nginx): Handles initial HTTP requests and serves static content.
+Application Server: Processes dynamic requests and executes the application code.
+
+Server 2:
+Application Server: Acts as a redundant server to handle additional dynamic requests and provide failover capabilities.
+
+Server 3:
+Load Balancer (HAproxy): Distributes incoming traffic across the two application servers using a specific distribution algorithm.
+
+Distribution Algorithm of Load Balancer:
+The load balancer is configured with a Round Robin distribution algorithm. It works by sequentially forwarding each new incoming request to the next available application server in a circular manner. This helps distribute the workload across the servers evenly.
+
+Active-Active vs. Active-Passive Setup:
+The load balancer enables an Active-Active setup, where both application servers are actively serving requests simultaneously. In an Active-Active setup, the workload is shared between the servers to improve performance and scalability. This ensures that even if one server fails, the other can continue to handle incoming requests.
+
+Database (MySQL):
+
+Primary-Replica (Master-Slave) Cluster: The database is configured as a Primary-Replica cluster. The Primary node (Master) handles write operations and replicates the data changes to the Replica node (Slave). The Replica node can handle read operations to improve performance.
+
+Difference between Primary and Replica Nodes:
+Primary Node: The Primary node is responsible for accepting write operations and making changes to the database. It acts as the authoritative source for data modifications.
+
+Replica Node: The Replica node replicates the data changes from the Primary node and can handle read operations. It serves as a backup and provides read scalability.
+Issues with this Infrastructure:
+
+Single Point of Failure (SPOF):
+
+The load balancer can become a single point of failure. If it fails, the incoming traffic won't be distributed, causing potential downtime.
+
+The database cluster might also have a single point of failure if the Primary node fails, affecting write operations and potentially impacting the availability of the website.
+
+Security Issues:
+
+Lack of firewall: Without a firewall, the servers are more vulnerable to unauthorized access or attacks from the internet.
+
+No HTTPS: The infrastructure lacks HTTPS encryption, which can expose sensitive user data during transmission.
+
+No Monitoring:
+
+Lack of monitoring tools or systems makes it difficult to identify and address performance issues, server failures, or security breaches promptly.

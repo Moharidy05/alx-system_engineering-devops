@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays a list of currently running processes containing the bash keyword.
+# The command ps -aux | grep bash is used to filter the output of the ps -aux command and display only the processes that have "bash" in their command name
+# shellcheck disable=SC2009
+# ps -aux: Lists all running processes on the system, providing detailed information about each process.
+# |: The pipe symbol redirects the output of the ps -aux command to the input of the next command.
+# grep bash: Searches for lines containing the word "bash" in the output of the previous command.
+
+ps -aux | grep bash

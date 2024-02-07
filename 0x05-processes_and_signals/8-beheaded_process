@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Kills the process 7-highlander.
+# In this command, -9 is the signal number for SIGKILL, which forcefully terminates the process. The -f option is used to match the process by its full command line.
+# By running the command pkill -9 -f "7-highlander", the "7-highlander" process will be forcefully terminated using the SIGKILL signal.
+# pkill -f -SIGKILL 7-highlander or pkill -9 -f "7-highlander" works.
+
+pkill -9 -f "7-highlander"
