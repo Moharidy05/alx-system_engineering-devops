@@ -1,18 +1,15 @@
-# !/usr/bin/pup
-# using Puppet to make changes to configuration file
+# make changes to config file using Puppet
 
-file { '/etc/ssh/ssh_config':
+include stdlib
+
+file_line { 'Refuse to authenticate using a password':
   ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => 'PasswordAuthentication no',
 }
 
-file_line { 'Turn off passwd auth':
-  path  => '/etc/ssh/ssh_config',
-  line  => 'PasswordAuthentication no',
-  match => '^#PasswordAuthentication',
-}
-
-file_line { 'Declare identity file':
-  path  => '/etc/ssh/ssh_config',
-  line  => 'IdentityFile ~/.ssh/school',
-  match => '^#IdentityFile',
+file_line { 'Use private key':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => 'IdentityFile ~/.ssh/school'
 }

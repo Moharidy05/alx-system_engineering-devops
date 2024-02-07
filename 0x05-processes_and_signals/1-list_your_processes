@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# -a: Shows processes from all users, including those not associated with the terminal.
-# -u: Displays detailed information about each process, including the username, CPU usage, memory usage, and start time.
-# -x: Includes processes that do not have a controlling terminal.
-# -f: Generates a full-format listing that includes additional information such as the process hierarchy (tree).
+# displays a list of currently running processes.
+# show all processes, for all users, including those
+# which might not have a TTY
+# Display in a user-oriented format
+# Show process hierarchy
 
 ps -auxf
