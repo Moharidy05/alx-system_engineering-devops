@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Displays its own PID
+#print the id of the program 
 
 echo $$
+

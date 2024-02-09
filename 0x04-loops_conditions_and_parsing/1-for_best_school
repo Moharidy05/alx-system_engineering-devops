@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times
-for _ in {1..10} ; do
+#loop to print Best School
+
+for ((n=1; n<=10; n++ )) 
+do
     echo "Best School"
 done

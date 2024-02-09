@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Manages 'manage_my_process'
+#this will test my everything 
+#+  "Usage: manage_my_process {start|stop|restart}"
 
 if [ "${1}" == "start" ]
 then
