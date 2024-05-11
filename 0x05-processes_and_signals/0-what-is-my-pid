@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#print the id of the program 
+# Displays its own process ID.
 
 echo $$
-

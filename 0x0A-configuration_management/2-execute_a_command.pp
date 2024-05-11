@@ -1,6 +1,5 @@
-# create a process named killmenow 
-
-exec { 'pkill killmenow' :
-    path    => '/bin/',
-    command => 'pkill killmenow',
-    }
+# Executes a bash command
+exec { 'kill':
+  command => 'pkill -f killmenow',
+  path    => ['/usr/bin', '/usr/sbin']
+}

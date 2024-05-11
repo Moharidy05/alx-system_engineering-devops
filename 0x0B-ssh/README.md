@@ -1,48 +1,25 @@
-# 0x0B. SSH
+# SSH
+## Resources
+- [What is a (physical) server - text](https://en.wikipedia.org/wiki/Server_%28computing%29#Hardware_requirement)
+- [What is a (physical) server - video](https://www.youtube.com/watch?v=B1ANfsDyjeA)
+- [SSH essentials](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
+- [SSH Config File](https://www.ssh.com/academy/ssh/config)
+- [Public Key Authentication for SSH](https://www.ssh.com/academy/ssh/public-key-authentication)
+- [How Secure Shell Works](https://www.youtube.com/watch?v=ORcvSkgdA58)
+- [SSH Crash Course](https://www.youtube.com/watch?v=hQWRp-FdTpc)
+### For reference:
+- [Understanding the SSH Encryption and Connection Process](https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process)
+- [Secure Shell Wiki](https://en.wikipedia.org/wiki/Secure_Shell_Protocol)
+- [IETF RFC 4251 (Description of the SSH Protocol](https://www.ietf.org/rfc/rfc4251.txt)
+- [Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
+- [Request for Comments](https://en.wikipedia.org/wiki/Request_for_Comments)
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Username</th>
-      <th>IP</th>
-      <th>State</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr>
-        <td>59637-web-01</td>
-        <td><code>ubuntu</code></td>
-        <td><code>52.23.212.37</code></td>
-        <td>running</td>
-        <td>
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-              Actions
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right">
-                <li><a data-confirm="Are you sure to reboot 59637-web-01?" href="/servers/9390/soft_reboot">Soft reboot</a></li>
-                  <li><a data-confirm="Are you sure to hard reboot 59637-web-01?" href="/servers/9390/hard_reboot">Hard reboot</a></li>
-
-              <li role="separator" class="divider"></li>
-
-                <li>
-                  <a data-confirm="Are you sure you'd like a new server?
-- This server will be destroyed
-- Did you update your public SSH key in your user profile yet?
-
-This action can take time...
-Please, be patient..." href="/servers/9390/ask_new">
-                    Ask a new server
-</a>                </li>
-            </ul>
-          </div>
-        </td>
-      </tr>
-    
-  </tbody>
-</table>
+### Tasks
+### Use a private key
+Write a Bash script that uses ssh to connect to your server using the private key ~/.ssh/holberton with the user ubuntu.
+### Create an SSH key pair
+Write a Bash script that creates an RSA key pair.
+###  Client configuration file
+Your Ubuntu Vagrant machine has an SSH configuration file for the local SSH client, let’s configure it to our needs so that you can connect to a server without typing a password. Share your SSH client configuration in your answer file.
+### Let me in!
+Now that you have successfully connected to your server, we would also like to join the party.
